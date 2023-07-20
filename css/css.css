@@ -1,0 +1,268 @@
+* {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(17, 17, 17);
+    background: linear-gradient(#120e40, #2f0e40);
+}
+
+.image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(190, 185, 185, 0.123);
+    padding: 4px;
+    margin-bottom: 10px;
+}
+
+.image .profile-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(170, 161, 161, 0.719);
+    padding: 15px;
+}
+
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 340px;
+    width: 100%;
+    background: rgba(75, 11, 148, 0.76);
+    background: #2f0e404b;
+    box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.26);
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.text-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    font-family: 'Ysabeau SC', sans-serif;
+    font-weight: 1000;
+    font-size: 28px;
+    padding-bottom: 16px;
+    color: rgb(228, 222, 222);
+    transition: all .5s ease;
+    cursor: grab;
+}
+
+.text:hover {
+    color: #8308c2;
+}
+
+.work {
+    font-family: 'Lumanosimo', cursive;
+    color: rgb(206, 200, 200);
+    transition: all .5s ease;
+    cursor: grab;
+    font-size: 12px;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    
+}
+
+.work:hover {
+    color: #8308c2;
+
+}
+
+.media-buttons {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: aliceblue;
+    font-size: 18px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 0 8px;
+    background-color: #4e146b;
+    text-decoration: none;
+    padding: 11px;
+    transition: all .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.1s * var(--i));
+
+}
+
+.link:hover {
+    background-color: #871fbb;
+    box-shadow: 0 0 30px #823da5;
+}
+
+.buttons {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin: 8px 0 0 0;
+    padding: 6px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+    
+}
+
+.follow {
+    background: #4e146b;
+    border-radius: 24px;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 24px;
+    border: none;
+    color: #ecdcdc;
+    font-family: 'Dancing Script', cursive;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.follow:hover {
+    background-color: rgb(147, 13, 224);
+    box-shadow: 0 0 30px #823da5;
+
+}
+
+.mess {
+    background: #4e146b;
+    border-radius: 24px;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 24px;
+    border: none;
+    color: #ecdcdc;
+    font-family: 'Dancing Script', cursive;
+    cursor: pointer;
+    transition: all .5s ease;
+   
+
+}
+
+.mess:hover {
+    background-color: rgb(147, 13, 224);
+    box-shadow: 0 0 30px #823da5;
+
+}
+
+.analytics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.data {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: #ecdcdc;
+    border-right: 2px solid #ffffff;
+}
+
+.data i {
+    font-size: 18px;
+    margin-right: 6px;
+    transition: all .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+
+}
+
+.data:last-child {
+    border-right: none;
+}
+
+.number {
+    font-family: 'Dancing Script', cursive;
+    transition: all .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+    
+}
+
+.number:hover {
+    color: #8308c2;
+}
+
+i:hover {
+    color: #8308c2;
+}
+
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottm {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
